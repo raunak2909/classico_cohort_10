@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main(){  ///M != m
 
 
@@ -9,8 +11,26 @@ void main(){  ///M != m
   /// SnackCase -> class identifier
   /// camelCase while giving variable and functions names
 
+  ///input ->
+  /*print("Enter your name: ");
+  String name = stdin.readLineSync().toString(); ///-> "null"
+  print("Hi, $name");*/
+  ///output
+  ///print
 
-  int sum1 = add(5,6);
+  ///get no from console
+  stdout.write("Enter no 1:"); ///"76.32" -> 76.32 -> 76
+  num no1 = num.parse(stdin.readLineSync().toString());
+  stdout.write("Enter no 2:");
+  num no2 = num.parse(stdin.readLineSync().toString());
+
+  print("Sum: ${add(no1, no2)}");
+  print("Difference: ${sub(no1, no2).abs()}");
+  print("Product: ${multi(no1, no2)}");
+  print("Division: ${divide(no1, no2)}");
+  print("Remainder: ${remainder(no1, no2)}");
+
+  /*int sum1 = add(5,6);
   print(sum1);
   print(sum1*2);
 
@@ -22,16 +42,34 @@ void main(){  ///M != m
   print(add(53,46));
 
 
-  print(add(11,21));
+  print(add(11,21));*/
 
 
 }
 
 /// this function add the numbers
-int add(int no1, int no2){
-  int sum = no1+no2;
+num add(num no1, num no2){
+  num sum = no1+no2;
   return sum;
 }
+
+///substraction
+num sub(num no1, num no2) => no1-no2; ///ternary operator ?:
+
+///multiplication
+num multi(num no1, num no2) => no1*no2;
+
+///division
+num divide(num no1, num no2){
+  return no1/no2;
+}
+///remainder /// 19/2 ->
+num remainder(num no1, num no2){
+  return no1%no2;
+}
+
+
+///273.72635 -> ~ -> 273
 
 ///1. get input from console
 ///2. make sub, multi, division and remainder function (+, -, *, /, %)
