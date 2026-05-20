@@ -1,15 +1,34 @@
 import 'dart:io';
 
+import 'package:classico_cohort_10/greatest_of_3.dart';
+
 void main(){
 
-  print("Enter your age: ");
-  int age = int.parse(stdin.readLineSync().toString()); ///"16" -> 16
+  /// do this with do-while and while-do
 
-  if(age>=18){
-    print("You're eligible to VOTE!");
-  } else {
-    print("You're not eligible to VOTE!");
-  }
+  bool isContinue = false;
+
+  do{
+    print("Enter your age: ");
+    int age = int.parse(stdin.readLineSync().toString()); ///"16" -> 16
+
+    if(age>=18){
+      print("You're eligible to VOTE!");
+    } else {
+      print("You're not eligible to VOTE!");
+    }
+
+    print("Do you want to continue (check for other ages)? (Y/N):");
+    String choice = getStrValue();
+
+    if(choice=="Y" || choice=="y" || choice=="Yes" || choice =="yes"){
+      isContinue = true;
+    } else {
+      isContinue = false;
+    }
+
+
+  } while(isContinue);
 
   ///1. Find the Greatest of 3 nos. (Done)
   ///2. Find the Smallest of 3 nos.

@@ -28,5 +28,7 @@ void main(){
 
 printScreen(String noPrompt) => print("Enter $noPrompt:");
 
-int getValue() => int.parse(stdin.readLineSync()!);
+String getStrValue() => stdin.readLineSync()!;
+
+int getValue() => int.parse(getStrValue());
 
