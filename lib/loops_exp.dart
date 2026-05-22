@@ -1,5 +1,7 @@
 void main(){
 
+  int no1 = 11;
+
   /*for(int a = 100; a>=90; a--){
     print(a);
   }*/
