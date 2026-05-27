@@ -102,7 +102,9 @@ void main() {
       engMarks + hinMarks + mathAvg + sciMarks + sstMarks;
 
   num percentage = (totalMarks/500) * 100;
-  print("${stuDetails[1]["name"]} has secured $percentage% in exam.");
+  stuDetails[1]["percentage"] = percentage;
+  print(stuDetails);
+  ///print("${stuDetails[1]["name"]} has secured $percentage% in exam.");
 
 
   ///1. print percentage of all students

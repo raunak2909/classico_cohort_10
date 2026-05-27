@@ -12,6 +12,8 @@ void main(){
 
   User u3 = User(name, age);
 
+  User u4 = User("Raman", 16);
+
   u3.login();
   u3.ageVerification();
 
@@ -25,9 +27,7 @@ void main(){
 
 class User{
 
-  ///attributes
-  String name;
-  int age;
+
 
   User(this.name, this.age); ///parameterized constructor
 
@@ -45,6 +45,8 @@ class User{
     }
   }
 
-
+  ///attributes
+  String name;
+  int age;
 
 }
