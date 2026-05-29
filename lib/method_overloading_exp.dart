@@ -22,7 +22,7 @@ void main(){
 
 class Calculations{
 
-  int add(int no1, int no2, {int no3 = 1, int no4 = 1}){
+  int add(int no1, int no2, {int? no3, int? no4}){
     ///return no1+no2+no3!; error
     /*if(no3!=null){
       return no1+no2+no3;
@@ -31,7 +31,7 @@ class Calculations{
     }*/
 
     /// return no1+no2+(no3 ?? 0);
-    return no1*no2*no3*no4;
+    return no1*no2*(no3??1)*(no4??1);
   }
 
 
