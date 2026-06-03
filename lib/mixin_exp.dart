@@ -1,7 +1,10 @@
+import 'package:classico_cohort_10/app_constants.dart';
+
 void main(){
 
   MyCalc calc = MyCalc();
   print(calc.add(11, 5));
+  print("Welcome to ${AppConstants.appName}");
   /// A. Error
   /// B. 16
   /// C. 55
